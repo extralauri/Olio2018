@@ -28,9 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = MainActivity.this;
-
-        System.out.println("Kansion sijainti: "+context.getFilesDir());
-
+        
         editText = (EditText) findViewById(R.id.editText);
         filename_text = (EditText) findViewById(R.id.editText2);
 
@@ -69,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             ins.close();
+            
         }catch (IOException e){
             Log.e("IOException","Virhe");
         } finally {
@@ -84,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
             s=result2+"\n";
             ows.write(s);
             ows.close();
+            
         }catch (IOException e){
             Log.e("IOException","Virhe");
         }finally {
